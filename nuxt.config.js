@@ -19,6 +19,8 @@ export default {
   publicRuntimeConfig: {
     initialSourceType: process.env.INITIAL_SOURCE_TYPE,
     initialSourceUrl: process.env.INITIAL_SOURCE_URL,
+    localSourceType: process.env.LOCAL_SOURCE_TYPE,
+    localSourceUrl: process.env.LOCAL_SOURCE_URL,
     io: {
       // will be available in this.$config.io
       sockets: [

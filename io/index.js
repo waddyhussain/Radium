@@ -39,6 +39,16 @@ export default function async() {
         label: "source",
       });
     }
+    if (
+      config.default.publicRuntimeConfig.localSourceType.length > 1 &&
+      config.default.publicRuntimeConfig.localSourceUrl.length > 1
+    ) {
+      sources.push({
+        type: config.default.publicRuntimeConfig.localSourceType,
+        file: config.default.publicRuntimeConfig.localSourceUrl,
+        label: "local",
+      });
+    }
 
     // Fetch emotes
     const fetchEmotes = async () => {
