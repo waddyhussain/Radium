@@ -133,6 +133,7 @@ export default function async() {
 
       socket.on("sendChatMessage", (message) => {
         if (message.message.length > 0 && message.user.username.length > 0) {
+          console.log(`[Chat] ${message.user.username}: ${message.message}`);
           io.emit("newChatMessage", message);
         }
       });
